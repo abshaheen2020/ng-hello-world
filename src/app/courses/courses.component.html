@@ -1,0 +1,13 @@
+<p>{{title}}</p>
+<ul>
+    <li *ngFor="let course of courses">
+        {{course}}
+    </li>
+</ul>
+<div (click)="onDivClicked($event)">
+    <button class="btn btn-primary" [class.active]="isActive" [style.background]="backgroundColor" (click)="onSave($event)">Save</button>
+</div>
+<input (keyup)="onKeyUp($event)"/>
+<input (keyup.enter)="onKeyUpFiltered($event)"/>
+<input #email (keyup.enter)="onKeyUpFilteredVariable(email.value)"/>
+
